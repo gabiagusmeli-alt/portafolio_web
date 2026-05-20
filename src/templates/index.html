@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Meli | Web, APIs y Scraping</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="eyebrow">Estudiante de Ciencias de la Computación</p>
+        <h1>Gabriel Meli</h1>
+        <p class="subtitle">Desarrollador con experiencia en Python, Flask, scraping web, PyQT6 y desarrollo web.</p>
+      </div>
+      <nav class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#stack">Stack</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre-mi" class="section hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="section-label">Hola, soy Gabriel</span>
+          <h2>Construyo soluciones efectivas con Python, scraping y aplicaciones web.</h2>
+          <p>Me especializo en extraer datos, consumir APIs, crear interfaces funcionales y desarrollar aplicaciones con Flask, Jinja y PyQT6.</p>
+          <div class="hero-actions">
+            <a class="button" href="#proyectos">Ver proyectos</a>
+            <a class="button button-secondary" href="#contacto">Contactarme</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Lo que ofrezco</h3>
+          <ul>
+            <li>Scraping web con BeautifulSoup, Selenium y Requests</li>
+            <li>Consumo e integración de APIs REST</li>
+            <li>Desarrollo web con Flask, HTML, CSS y Jinja</li>
+            <li>Formularios y validación con Flask-WTF / WTForms</li>
+            <li>Aplicaciones de escritorio con PyQT6</li>
+            <li>Trabajo colaborativo con Git / GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section projects">
+      <div class="container">
+        <div class="section-header">
+          <span>Proyectos Destacados</span>
+          <h2>Innovación en código</h2>
+          <p>Trabajo en proyectos que combinan visualización, análisis y lógica de alto rendimiento.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Prime imagen factory</h3>
+            <p>Programa que genera representaciones visuales mediante el uso de un gran número primo de 2500 caracteres, combinando Python, C y PyQT6 para una experiencia interactiva.</p>
+            <p class="project-meta">Python · C · PyQT6 · Pillow</p>
+          </article>
+          <article class="project-card">
+            <h3>Scraping y automatización web</h3>
+            <p>Proyecto de extracción de datos y automatización web usando HTML/CSS, Jinja, BeautifulSoup y Selenium para obtener información en tiempo real.</p>
+            <p class="project-meta">Python · BeautifulSoup · Selenium · HTML/CSS · Jinja</p>
+          </article>
+          <article class="project-card">
+            <h3>Aplicaciones web con Flask</h3>
+            <p>Desarrollo de aplicaciones con Flask, bases de datos SQLAlchemy, autenticación y plantillas dinámicas con Jinja.</p>
+            <p class="project-meta">Python · Flask · SQLAlchemy · WTForms · Jinja</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section skills">
+      <div class="container">
+        <div class="section-header">
+          <span>Stack Tecnológico</span>
+          <h2>Herramientas que manejo</h2>
+          <p>Combino aprendizaje constante con prácticas de código limpio y desarrollo orientado al rendimiento.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Lenguajes</h3>
+            <p>Python · C</p>
+          </article>
+          <article class="skill-card">
+            <h3>Front-end y templates</h3>
+            <p>HTML · CSS · Jinja · Bootstrap</p>
+          </article>
+          <article class="skill-card">
+            <h3>Back-end y bases de datos</h3>
+            <p>Flask · SQLAlchemy · Flask-WTF · WTForms · Flask-Login · CKEditor</p>
+          </article>
+          <article class="skill-card">
+            <h3>Scraping y APIs</h3>
+            <p>BeautifulSoup · Selenium · Requests · REST APIs</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="trayectoria" class="section experience">
+      <div class="container">
+        <div class="section-header">
+          <span>Trayectoria</span>
+          <h2>Mi camino profesional</h2>
+          <p>Proyectos y aprendizaje enfocados en desempeño, confiabilidad y soluciones escalables.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-date">2025</span>
+            <h3>Desarrollo de aplicaciones web</h3>
+            <p>Creé proyectos con Flask, plantillas Jinja y formularios dinámicos para experiencias web funcionales.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">2024</span>
+            <h3>Scraping y automatización web</h3>
+            <p>Implementé extracción de datos y automatización con Requests, BeautifulSoup y Selenium para obtener información útil.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">2023</span>
+            <h3>Proyectos open-source y académicos</h3>
+            <p>Construí herramientas complejas con Python y participé activamente en la creación de software útil e innovador.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="section-label">Conéctate</span>
+          <h2>Estoy listo para nuevos desafíos</h2>
+          <p>Si buscas un perfil comprometido con la calidad del código y con ganas de aportar en proyectos de APIs, scraping y desarrollo de aplicaciones, conversemos.</p>
+          <div class="contact-details">
+            <div>
+              <strong>Email</strong>
+              <p>gabiagusmeli@gmail.com</p>
+            </div>
+            <div>
+              <strong>Ubicación</strong>
+              <p>Tanti, Córdoba - Argentina</p>
+            </div>
+            <div>
+              <strong>LinkedIn</strong>
+              <p><a href="https://www.linkedin.com/in/gabriel-meli-4a298b396" target="_blank" rel="noreferrer">Gabriel Meli</a></p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" action="/" method="POST">
+          {% if mensaje_error %}
+            <div class="alert alert-error">
+              {{ mensaje_error }}
+            </div>
+          {% endif %}
+          
+          {% if mensaje_exito %}
+            <div class="alert alert-success">
+              {{ mensaje_exito }}
+            </div>
+          {% endif %}
+          
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" maxlength="50">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" required maxlength="100">
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto (hasta 500 caracteres)" required maxlength="510"></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Gabriel Meli. Desarrollo de aplicaciones web, APIs y scraping.</p>
+      <p>Creado con Python, HTML y CSS.</p>
+    </div>
+  </footer>
+</body>
+</html>
