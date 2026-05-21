@@ -26,26 +26,44 @@
   <main>
     <section id="sobre-mi" class="section hero">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-copy">
           <span class="section-label">Hola, soy Gabriel</span>
           <h2>Construyo soluciones efectivas con Python, scraping y aplicaciones web.</h2>
-          <p>Me especializo en extraer datos, consumir APIs, crear interfaces funcionales y desarrollar aplicaciones con Flask, Jinja y PyQT6.</p>
+          <p>Transformo datos y procesos en productos digitales confiables usando Flask, APIs, scraping y automatización.</p>
+
+          <div class="hero-metrics">
+            <div>
+              <strong>Proyectos reales</strong>
+              <span>Aplicaciones web y automatización para clientes</span>
+            </div>
+            <div>
+              <strong>Desarrollo sólido</strong>
+              <span>Arquitectura clara, formularios seguros y despliegue estable</span>
+            </div>
+          </div>
+
           <div class="hero-actions">
             <a class="button" href="#proyectos">Ver proyectos</a>
             <a class="button button-secondary" href="#contacto">Contactarme</a>
           </div>
         </div>
-        <div class="hero-card">
-          <h3>Lo que ofrezco</h3>
-          <ul>
-            <li>Scraping web con BeautifulSoup, Selenium y Requests</li>
-            <li>Consumo e integración de APIs REST</li>
-            <li>Desarrollo web con Flask, HTML, CSS y Jinja</li>
-            <li>Formularios y validación con Flask-WTF / WTForms</li>
-            <li>Aplicaciones de escritorio con PyQT6</li>
-            <li>Trabajo colaborativo con Git / GitHub</li>
-          </ul>
-        </div>
+
+        <aside class="hero-side">
+          <div class="hero-profile">
+            <img class="profile-image" src="{{ url_for('static', filename='foto.png') }}" alt="Foto profesional de Gabriel Meli">
+          </div>
+
+          <div class="hero-card">
+            <h3>Habilidades clave</h3>
+            <ul>
+              <li>Scraping web con BeautifulSoup, Selenium y Requests</li>
+              <li>Integración de APIs REST y servicios backend</li>
+              <li>Desarrollo web con Flask, Jinja y plantillas limpias</li>
+              <li>Formularios seguros y validación con Flask-WTF / WTForms</li>
+              <li>Aplicaciones de escritorio con PyQT6</li>
+            </ul>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -80,7 +98,7 @@
       <div class="container">
         <div class="section-header">
           <span>Stack Tecnológico</span>
-          <h2>Herramientas que manejo</h2>
+          <h2>Skills</h2>
           <p>Combino aprendizaje constante con prácticas de código limpio y desarrollo orientado al rendimiento.</p>
         </div>
         <div class="skills-grid">
@@ -121,11 +139,7 @@
             <span class="timeline-date">2024</span>
             <h3>Scraping y automatización web</h3>
             <p>Implementé extracción de datos y automatización con Requests, BeautifulSoup y Selenium para obtener información útil.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">2023</span>
-            <h3>Proyectos open-source y académicos</h3>
-            <p>Construí herramientas complejas con Python y participé activamente en la creación de software útil e innovador.</p>
+            <p>Implementacion de aplicacones de escritorio utilizando PyQT6, python y C</p>
           </div>
         </div>
       </div>
