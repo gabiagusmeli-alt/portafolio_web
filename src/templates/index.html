@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+  <div style="height: 56px;"></div>
   <header class="site-header">
     <div class="container header-inner">
       <div>
@@ -201,5 +202,24 @@
       <p>Creado con Python, HTML y CSS.</p>
     </div>
   </footer>
+
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('.site-header');
+    
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Bajando más de 100px
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        // Subiendo o en la parte superior
+        header.style.transform = 'translateY(0)';
+      }
+      
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
 </body>
 </html>
