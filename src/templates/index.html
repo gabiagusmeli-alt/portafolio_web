@@ -1,224 +1,441 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="warm">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gabriel Meli | Web, APIs y Scraping</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div style="height: 56px;"></div>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div>
-        <p class="eyebrow">Estudiante de Ciencias de la Computación</p>
-        <h1>Gabriel Meli</h1>
-        <p class="subtitle">Desarrollador con experiencia en Python, Flask, scraping web, PyQT6 y desarrollo web.</p>
+  <div class="app-container">
+    <!-- Navbar / Sidebar -->
+    <header class="site-header">
+      <div class="header-brand">
+        <div class="avatar">
+          <img src="{{ url_for('static', filename='foto.png') }}" alt="Gabriel Meli">
+        </div>
+        <div class="brand-info">
+          <h1>Gabriel Meli</h1>
+          <p>Software Developer</p>
+        </div>
       </div>
-      <nav class="nav-links">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#stack">Stack</a>
-        <a href="#contacto">Contacto</a>
+      
+      <nav class="nav-tabs">
+        <button class="tab-btn active" data-target="sobre-mi" data-theme="warm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          Sobre Mí
+        </button>
+        <button class="tab-btn" data-target="proyectos" data-theme="azure">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          Proyectos
+        </button>
+        <button class="tab-btn" data-target="formacion" data-theme="wine">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          Formación & Stack
+        </button>
+        <button class="tab-btn" data-target="contacto" data-theme="coast">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Contacto
+        </button>
+        <button class="tab-btn" data-target="colaboraciones" data-theme="royal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Colaboraciones
+        </button>
       </nav>
-    </div>
-  </header>
 
-  <main>
-    <section id="sobre-mi" class="section hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="section-label">Hola, soy Gabriel</span>
-          <h2>Construyo soluciones efectivas con Python, scraping y aplicaciones web.</h2>
-          <p>Transformo datos y procesos en productos digitales confiables usando Flask, APIs, scraping y automatización.</p>
+      <div class="header-social">
+        <a href="https://www.linkedin.com/in/gabriel-meli-4a298b396" target="_blank" rel="noreferrer" class="social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+      </div>
+    </header>
 
-          <div class="hero-metrics">
-            <div>
-              <strong>Proyectos reales</strong>
-              <span>Aplicaciones web y automatización para clientes</span>
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Tab: Sobre Mí -->
+      <section id="sobre-mi" class="tab-pane active fade-in">
+        <div class="content-header">
+          <span class="badge">Hola, soy Gabriel</span>
+          <h2>Construyo soluciones efectivas y eficientes.</h2>
+          <p class="lead-text">Transformo datos y procesos en productos digitales confiables usando Python, APIs, scraping y desarrollo web moderno.</p>
+        </div>
+        
+        <div class="grid-2-col mt-4">
+          <div class="glass-card feature-card">
+            <div class="icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             </div>
-            <div>
-              <strong>Desarrollo sólido</strong>
-              <span>Arquitectura clara, formularios seguros y despliegue estable</span>
+            <h3>Proyectos Reales</h3>
+            <p>Aplicaciones web y automatización diseñadas para resolver problemas concretos de los clientes.</p>
+          </div>
+          <div class="glass-card feature-card">
+            <div class="icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3>Arquitectura Sólida</h3>
+            <p>Código limpio, formularios seguros y despliegue estable pensando en el rendimiento a largo plazo.</p>
+          </div>
+        </div>
+
+        <div class="glass-card mt-4 p-4">
+          <h3 class="mb-3">¿Qué hago?</h3>
+          <ul class="skills-list">
+            <li><strong>Scraping Avanzado:</strong> Extracción de datos con BeautifulSoup, Selenium y Requests.</li>
+            <li><strong>Desarrollo Web Backend:</strong> Construcción de APIs y aplicaciones sólidas con Flask, Jinja y SQLAlchemy.</li>
+            <li><strong>Interfaces de Usuario:</strong> Desarrollo de aplicaciones de escritorio interactivas con PyQt6 y web frontends elegantes.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Tab: Proyectos -->
+      <section id="proyectos" class="tab-pane">
+        <div class="content-header">
+          <span class="badge">Portafolio</span>
+          <h2>Proyectos Destacados</h2>
+          <p class="lead-text">Una muestra de mi trabajo combinando visualización, análisis y lógica de alto rendimiento.</p>
+        </div>
+
+        <div id="active-filter-container" style="display: none; margin-bottom: 1.5rem; align-items: center; gap: 1rem;">
+          <span style="color: var(--text-muted); font-size: 0.9rem;">Filtro activo:</span>
+          <button id="clear-filter-btn" class="badge" style="cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 0;">
+            <span id="active-filter-name">Tecnología</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <div class="projects-grid mt-4">
+          <article class="glass-card project-card">
+            <div class="project-content">
+              <h3><a href="https://github.com/gabiagusmeli-alt/Computer_Vision_Piano" target="_blank" style="color: inherit; text-decoration: none;">Computer Vision Piano <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 4px; opacity: 0.6;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></h3>
+              <p>Interfaz que a través del reconocimiento de gestos permite la manipulación de partículas y funciones matemáticas en un sistema de ejes tridimensional.</p>
+              <div class="tags">
+                <span>Python</span><span>OpenCV</span><span>Math</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <div class="project-content">
+              <h3><a href="https://github.com/gabiagusmeli-alt/prime-imagen-factory-" target="_blank" style="color: inherit; text-decoration: none;">Prime Image Factory <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 4px; opacity: 0.6;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></h3>
+              <p>Motor de procesamiento de imágenes que transforma representaciones visuales en valores numéricos. Utiliza un algoritmo iterativo de primalidad implementado en C.</p>
+              <div class="tags">
+                <span>Python</span><span>C</span><span>PyQT6</span><span>Pillow</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <div class="project-content">
+              <h3><a href="https://github.com/gabiagusmeli-alt/portafolio_web" target="_blank" style="color: inherit; text-decoration: none;">Portafolio Web <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 4px; opacity: 0.6;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></h3>
+              <p>Un portafolio web para mostrar experiencia, integrando Flask, HTML, CSS moderno y preparado para futuras integraciones con bases de datos y automatización n8n.</p>
+              <div class="tags">
+                <span>Flask</span><span>HTML/CSS</span><span>JS</span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="glass-card project-card">
+            <div class="project-content">
+              <h3>Descargador de YouTube <span class="status-badge">En desarrollo</span></h3>
+              <p>Un descargador de videos y listas de reproducción de YouTube con una interfaz gráfica completa y agradable utilizando PyQt6.</p>
+              <div class="tags">
+                <span>Python</span><span>PyQT6</span><span>yt-dlp</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <div class="project-content">
+              <h3>App de Marcas de Agua <span class="status-badge">En desarrollo</span></h3>
+              <p>Aplicación diseñada para procesar imágenes masivamente, aplicando marcas de agua de forma eficiente a través de una interfaz de escritorio.</p>
+              <div class="tags">
+                <span>Python</span><span>PyQT6</span><span>Pillow</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Tab: Colaboraciones -->
+      <section id="colaboraciones" class="tab-pane">
+        <div class="content-header">
+          <span class="badge">Trabajo en Equipo</span>
+          <h2>Colaboraciones</h2>
+          <p class="lead-text">Proyectos en los que he colaborado con otros desarrolladores y aportes al código abierto.</p>
+        </div>
+
+        <div class="projects-grid mt-4">
+          <article class="glass-card project-card" style="text-align: center; justify-content: center; min-height: 280px; display: flex; align-items: center; background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--surface-color)) 0%, color-mix(in srgb, var(--accent-warm) 8%, var(--surface-color)) 100%);">
+            <div class="project-content" style="align-items: center; justify-content: center; text-align: center;">
+              <div class="icon-wrapper" style="margin: 0 auto 1.5rem; font-size: 2.5rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 8 12 12 14 14"></polyline></svg>
+              </div>
+              <p style="margin-bottom: 0; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.03em;">Colaboraciones próximamente</p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Aún trabajando en mis aportes al código abierto...</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Tab: Formación & Stack -->
+      <section id="formacion" class="tab-pane">
+        <div class="content-header">
+          <span class="badge">Skills & Trayectoria</span>
+          <h2>Evolución Profesional</h2>
+          <p class="lead-text">Mi stack tecnológico y el camino que he recorrido para dominarlo.</p>
+        </div>
+
+        <div class="grid-2-col mt-4">
+          <div class="stack-section">
+            <h3 class="section-title">Stack Tecnológico</h3>
+            <div class="glass-card p-4 mt-3">
+              <div class="tech-group">
+                <h4>Lenguajes</h4>
+                <div class="tags"><span class="solid-tag">Python</span><span class="solid-tag">C</span></div>
+              </div>
+              <div class="tech-group mt-3">
+                <h4>Frontend Web</h4>
+                <div class="tags"><span class="solid-tag">HTML5 / CSS3</span><span class="solid-tag">Jinja</span><span class="solid-tag">Bootstrap</span></div>
+              </div>
+              <div class="tech-group mt-3">
+                <h4>Backend & APIs</h4>
+                <div class="tags"><span class="solid-tag">Flask</span><span class="solid-tag">SQLAlchemy</span><span class="solid-tag">REST APIs</span></div>
+              </div>
+              <div class="tech-group mt-3">
+                <h4>Scraping & Datos</h4>
+                <div class="tags"><span class="solid-tag">BeautifulSoup</span><span class="solid-tag">Selenium</span><span class="solid-tag">Requests</span><span class="solid-tag">yt-dlp</span></div>
+              </div>
+              <div class="tech-group mt-3">
+                <h4>Desktop & Media</h4>
+                <div class="tags"><span class="solid-tag">PyQt6</span><span class="solid-tag">OpenCV</span><span class="solid-tag">Pillow</span></div>
+              </div>
+              <div class="tech-group mt-3">
+                <h4>Herramientas & Versionado</h4>
+                <div class="tags"><span class="solid-tag">Git</span><span class="solid-tag">Bitbucket</span><span class="solid-tag">Postman</span></div>
+              </div>
             </div>
           </div>
 
-          <div class="hero-actions">
-            <a class="button" href="#proyectos">Ver proyectos</a>
-            <a class="button button-secondary" href="#contacto">Contactarme</a>
+          <div class="timeline-section">
+            <h3 class="section-title">Trayectoria</h3>
+            <div class="timeline mt-3">
+              <div class="timeline-item glass-card">
+                <span class="timeline-year">2025</span>
+                <h4>Desarrollo de Aplicaciones Web</h4>
+                <p>Creación de proyectos integrales con Flask, plantillas Jinja y formularios dinámicos enfocados en UX/UI y rendimiento.</p>
+              </div>
+              <div class="timeline-item glass-card">
+                <span class="timeline-year">2024</span>
+                <h4>Scraping y Automatización</h4>
+                <p>Implementación de motores de extracción de datos con Requests, BeautifulSoup y Selenium. Desarrollo de aplicaciones de escritorio con PyQt6.</p>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <aside class="hero-side">
-          <div class="hero-profile">
-            <img class="profile-image" src="{{ url_for('static', filename='foto.png') }}" alt="Foto profesional de Gabriel Meli">
-          </div>
-
-          <div class="hero-card">
-            <h3>Habilidades clave</h3>
-            <ul>
-              <li>Scraping web con BeautifulSoup, Selenium y Requests</li>
-              <li>Integración de APIs REST y servicios backend</li>
-              <li>Desarrollo web con Flask, Jinja y plantillas limpias</li>
-              <li>Formularios seguros y validación con Flask-WTF / WTForms</li>
-              <li>Aplicaciones de escritorio con PyQT6</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="proyectos" class="section projects">
-      <div class="container">
-        <div class="section-header">
-          <span>Proyectos Destacados</span>
-          <h2>Innovación en código</h2>
-          <p>Trabajo en proyectos que combinan visualización, análisis y lógica de alto rendimiento.</p>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card">
-            <h3>Prime imagen factory</h3>
-            <p>Programa que genera representaciones visuales mediante el uso de un gran número primo de 2500 caracteres, combinando Python, C y PyQT6 para una experiencia interactiva.</p>
-            <p class="project-meta">Python · C · PyQT6 · Pillow</p>
-          </article>
-          <article class="project-card">
-            <h3>Scraping y automatización web</h3>
-            <p>Proyecto de extracción de datos y automatización web usando HTML/CSS, Jinja, BeautifulSoup y Selenium para obtener información en tiempo real.</p>
-            <p class="project-meta">Python · BeautifulSoup · Selenium · HTML/CSS · Jinja</p>
-          </article>
-          <article class="project-card">
-            <h3>Aplicaciones web con Flask</h3>
-            <p>Desarrollo de aplicaciones con Flask, bases de datos SQLAlchemy, autenticación y plantillas dinámicas con Jinja.</p>
-            <p class="project-meta">Python · Flask · SQLAlchemy · WTForms · Jinja</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="stack" class="section skills">
-      <div class="container">
-        <div class="section-header">
-          <span>Stack Tecnológico</span>
-          <h2>Skills</h2>
-          <p>Combino aprendizaje constante con prácticas de código limpio y desarrollo orientado al rendimiento.</p>
-        </div>
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>Lenguajes</h3>
-            <p>Python · C</p>
-          </article>
-          <article class="skill-card">
-            <h3>Front-end y templates</h3>
-            <p>HTML · CSS · Jinja · Bootstrap</p>
-          </article>
-          <article class="skill-card">
-            <h3>Back-end y bases de datos</h3>
-            <p>Flask · SQLAlchemy · Flask-WTF · WTForms · Flask-Login · CKEditor</p>
-          </article>
-          <article class="skill-card">
-            <h3>Scraping y APIs</h3>
-            <p>BeautifulSoup · Selenium · Requests · REST APIs</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="trayectoria" class="section experience">
-      <div class="container">
-        <div class="section-header">
-          <span>Trayectoria</span>
-          <h2>Mi camino profesional</h2>
-          <p>Proyectos y aprendizaje enfocados en desempeño, confiabilidad y soluciones escalables.</p>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-date">2025</span>
-            <h3>Desarrollo de aplicaciones web</h3>
-            <p>Creé proyectos con Flask, plantillas Jinja y formularios dinámicos para experiencias web funcionales.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">2024</span>
-            <h3>Scraping y automatización web</h3>
-            <p>Implementé extracción de datos y automatización con Requests, BeautifulSoup y Selenium para obtener información útil.</p>
-            <p>Implementacion de aplicacones de escritorio utilizando PyQT6, python y C</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" class="section contact">
-      <div class="container contact-grid">
-        <div class="contact-info">
-          <span class="section-label">Conéctate</span>
+      <!-- Tab: Contacto -->
+      <section id="contacto" class="tab-pane">
+        <div class="content-header">
+          <span class="badge">Hablemos</span>
           <h2>Estoy listo para nuevos desafíos</h2>
-          <p>Si buscas un perfil comprometido con la calidad del código y con ganas de aportar en proyectos de APIs, scraping y desarrollo de aplicaciones, conversemos.</p>
-          <div class="contact-details">
-            <div>
-              <strong>Email</strong>
-              <p>gabiagusmeli@gmail.com</p>
-            </div>
-            <div>
-              <strong>Ubicación</strong>
-              <p>Tanti, Córdoba - Argentina</p>
-            </div>
-            <div>
-              <strong>LinkedIn</strong>
-              <p><a href="https://www.linkedin.com/in/gabriel-meli-4a298b396" target="_blank" rel="noreferrer">Gabriel Meli</a></p>
-            </div>
-          </div>
+          <p class="lead-text">Si buscas un perfil comprometido con la calidad del código y con ganas de aportar valor, contáctame.</p>
         </div>
 
-        <form class="contact-form" action="/" method="POST">
-          {% if mensaje_error %}
-            <div class="alert alert-error">
-              {{ mensaje_error }}
+        <div class="grid-2-col mt-4">
+          <div class="contact-info-panel">
+            <div class="glass-card info-card" style="background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, var(--surface-color)) 0%, transparent 100%); border: 1.5px solid color-mix(in srgb, var(--accent) 25%, transparent);">
+              <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:gabiagusmeli@gmail.com" style="color: var(--text-muted); text-decoration: none; transition: color var(--transition-normal);" onmouseover="this.style.color='var(--accent-light)'" onmouseout="this.style.color='var(--text-muted)'">gabiagusmeli@gmail.com</a></p>
+              </div>
             </div>
-          {% endif %}
-          
-          {% if mensaje_exito %}
-            <div class="alert alert-success">
-              {{ mensaje_exito }}
+            
+            <div class="glass-card info-card mt-3" style="background: linear-gradient(135deg, color-mix(in srgb, var(--accent-warm) 12%, var(--surface-color)) 0%, transparent 100%); border: 1.5px solid color-mix(in srgb, var(--accent-warm) 25%, transparent);">
+              <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <h4>Ubicación</h4>
+                <p>Tanti, Córdoba - Argentina</p>
+              </div>
             </div>
-          {% endif %}
-          
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" maxlength="50">
+            
+            <div class="glass-card info-card mt-3" style="background: linear-gradient(135deg, color-mix(in srgb, var(--accent-soft) 12%, var(--surface-color)) 0%, transparent 100%); border: 1.5px solid color-mix(in srgb, var(--accent-soft) 25%, transparent);">
+              <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <div>
+                <h4>LinkedIn</h4>
+                <p><a href="https://www.linkedin.com/in/gabriel-meli-4a298b396" target="_blank" rel="noreferrer" style="color: var(--text-muted); text-decoration: none; transition: color var(--transition-normal);" onmouseover="this.style.color='var(--accent-light)'" onmouseout="this.style.color='var(--text-muted)'">Gabriel Meli</a></p>
+              </div>
+            </div>
+          </div>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="tu@correo.com" required maxlength="100">
+          <div class="glass-card form-panel">
+            <form action="/" method="POST" class="contact-form">
+              {% if mensaje_error %}
+                <div class="alert alert-error">
+                  {{ mensaje_error }}
+                </div>
+              {% endif %}
+              
+              {% if mensaje_exito %}
+                <div class="alert alert-success">
+                  {{ mensaje_exito }}
+                </div>
+              {% endif %}
+              
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" maxlength="50" required>
+              </div>
 
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto (hasta 500 caracteres)" required maxlength="510"></textarea>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tu@correo.com" required maxlength="100">
+              </div>
 
-          <button type="submit">Enviar mensaje</button>
-        </form>
-      </div>
-    </section>
-  </main>
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto..." required maxlength="510"></textarea>
+              </div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Gabriel Meli. Desarrollo de aplicaciones web, APIs y scraping.</p>
-      <p>Creado con Python, HTML y CSS.</p>
-    </div>
-  </footer>
+              <button type="submit" class="btn-primary">
+                Enviar mensaje
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer mt-5">
+        <p>© 2026 Gabriel Meli. Web, APIs y Scraping.</p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="bg-effects">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
 
   <script>
-    let lastScrollTop = 0;
-    const header = document.querySelector('.site-header');
-    
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabPanes = document.querySelectorAll('.tab-pane');
+      const htmlElement = document.documentElement;
       
-      if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // Bajando más de 100px
-        header.style.transform = 'translateY(-100%)';
-      } else {
-        // Subiendo o en la parte superior
-        header.style.transform = 'translateY(0)';
+      const hasErrors = document.querySelector('.alert-error');
+      const hasSuccess = document.querySelector('.alert-success');
+      
+      if(hasErrors || hasSuccess) {
+         activateTab('contacto', 'coast');
       }
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          activateTab(btn.getAttribute('data-target'), btn.getAttribute('data-theme'));
+        });
+      });
       
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      function activateTab(targetId, themeName) {
+        tabBtns.forEach(b => {
+          if(b.getAttribute('data-target') === targetId) {
+             b.classList.add('active');
+          } else {
+             b.classList.remove('active');
+          }
+        });
+
+        tabPanes.forEach(pane => {
+          if (pane.id === targetId) {
+            pane.classList.add('active');
+            void pane.offsetWidth;
+            pane.classList.add('fade-in');
+          } else {
+            pane.classList.remove('active', 'fade-in');
+          }
+        });
+
+        if (themeName) {
+          htmlElement.setAttribute('data-theme', themeName);
+        }
+      }
+
+      // Project Filtering Logic
+      const allTags = document.querySelectorAll('.tags span');
+      const projectCards = document.querySelectorAll('.project-card');
+      const filterContainer = document.getElementById('active-filter-container');
+      const activeFilterName = document.getElementById('active-filter-name');
+      const clearFilterBtn = document.getElementById('clear-filter-btn');
+
+      function filterProjects(tech) {
+        projectCards.forEach(card => {
+          // Si la tarjeta es el marcador de posición "Próximamente", la omitimos
+          if(card.textContent.includes("Próximamente")) return;
+          
+          const cardTags = Array.from(card.querySelectorAll('.tags span')).map(span => span.textContent.trim().toLowerCase());
+          
+          // Verificar si alguna etiqueta de la tarjeta incluye el texto buscado (o viceversa)
+          const isMatch = cardTags.some(t => t.includes(tech.toLowerCase()) || tech.toLowerCase().includes(t));
+          
+          if (isMatch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Solo mostrar indicador si el contenedor de filtro existe
+        if(filterContainer) {
+          filterContainer.style.display = 'flex';
+          activeFilterName.textContent = tech;
+        }
+        
+        // Navegar a la pestaña Proyectos
+        activateTab('proyectos', 'azure');
+        
+        // Hacer scroll suave hacia la sección de proyectos
+        const proyectosTab = document.getElementById('proyectos');
+        if (proyectosTab) {
+          window.scrollTo({
+            top: proyectosTab.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      }
+
+      function clearFilter() {
+        projectCards.forEach(card => {
+          card.style.display = 'flex';
+        });
+        if(filterContainer) {
+          filterContainer.style.display = 'none';
+        }
+      }
+
+      // Añadir eventos a todas las etiquetas de tecnología
+      allTags.forEach(tag => {
+        tag.classList.add('clickable-tag');
+        tag.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const tech = tag.textContent.trim();
+          // Casos especiales (ej. "HTML5 / CSS3" separarlos o buscar ambas)
+          filterProjects(tech.split('/')[0].trim()); 
+        });
+      });
+
+      // Evento para el botón de limpiar filtro
+      if(clearFilterBtn) {
+        clearFilterBtn.addEventListener('click', clearFilter);
+      }
     });
   </script>
 </body>
