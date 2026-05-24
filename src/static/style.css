@@ -1,24 +1,24 @@
 :root {
-  /* Sobre mí — #f93414 #fe6c31 #feae6c #06889b #006b8f #011f51 */
-  --bg-color: #011f51;
-  --bg-mid: #006b8f;
-  --surface-color: color-mix(in srgb, #006b8f 40%, transparent);
-  --surface-border: color-mix(in srgb, #feae6c 16%, transparent);
-  --header-bg: color-mix(in srgb, #011f51 92%, transparent);
-  --text-main: #f5ebe0;
-  --text-muted: color-mix(in srgb, #feae6c 62%, #011f51);
-  --accent: #06889b;
-  --accent-light: #feae6c;
-  --accent-soft: #06889b;
-  --accent-warm: #fe6c31;
-  --text-on-accent: #011f51;
-  --hover-bg: color-mix(in srgb, #06889b 12%, transparent);
-  --input-bg: color-mix(in srgb, #011f51 78%, #006b8f);
-  --accent-glow: color-mix(in srgb, #06889b 20%, transparent);
-  --accent-strong-glow: color-mix(in srgb, #006b8f 45%, transparent);
-  --shadow-color: color-mix(in srgb, #011f51 70%, transparent);
-  --orb-1-color: color-mix(in srgb, #06889b 20%, transparent);
-  --orb-2-color: color-mix(in srgb, #fe6c31 12%, transparent);
+  /* Sobre mí — Warm Palette: Coral & Peach */
+  --bg-color: #fdf6f2;
+  --bg-mid: #f5e6d3;
+  --surface-color: color-mix(in srgb, #ffe0c8 50%, transparent);
+  --surface-border: color-mix(in srgb, #e8956f 25%, transparent);
+  --header-bg: color-mix(in srgb, #fdf6f2 94%, transparent);
+  --text-main: #2d1f1a;
+  --text-muted: color-mix(in srgb, #d97857 68%, #fdf6f2);
+  --accent: #d97857;
+  --accent-light: #f5a88a;
+  --accent-soft: #e67e50;
+  --accent-warm: #e85a3f;
+  --text-on-accent: #fdf6f2;
+  --hover-bg: color-mix(in srgb, #e8956f 15%, transparent);
+  --input-bg: color-mix(in srgb, #ffffff 85%, #f5e6d3);
+  --accent-glow: color-mix(in srgb, #d97857 18%, transparent);
+  --accent-strong-glow: color-mix(in srgb, #f5e6d3 50%, transparent);
+  --shadow-color: color-mix(in srgb, #2d1f1a 12%, transparent);
+  --orb-1-color: color-mix(in srgb, #e8956f 15%, transparent);
+  --orb-2-color: color-mix(in srgb, #f5a88a 10%, transparent);
 
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-heading: 'Outfit', system-ui, sans-serif;
@@ -28,117 +28,117 @@
 
 /* warm — Sobre mí */
 html[data-theme="warm"] {
-  --bg-color: #011f51;
-  --bg-mid: #006b8f;
-  --surface-color: color-mix(in srgb, #006b8f 40%, transparent);
-  --surface-border: color-mix(in srgb, #feae6c 16%, transparent);
-  --header-bg: color-mix(in srgb, #011f51 92%, transparent);
-  --text-main: #f5ebe0;
-  --text-muted: color-mix(in srgb, #feae6c 62%, #011f51);
-  --accent: #06889b;
-  --accent-light: #feae6c;
-  --accent-soft: #06889b;
-  --accent-warm: #fe6c31;
-  --text-on-accent: #011f51;
-  --hover-bg: color-mix(in srgb, #06889b 12%, transparent);
-  --input-bg: color-mix(in srgb, #011f51 78%, #006b8f);
-  --accent-glow: color-mix(in srgb, #06889b 20%, transparent);
-  --accent-strong-glow: color-mix(in srgb, #006b8f 45%, transparent);
-  --shadow-color: color-mix(in srgb, #011f51 70%, transparent);
-  --orb-1-color: color-mix(in srgb, #06889b 20%, transparent);
-  --orb-2-color: color-mix(in srgb, #fe6c31 12%, transparent);
+  --bg-color: #fdf6f2;
+  --bg-mid: #f5e6d3;
+  --surface-color: color-mix(in srgb, #ffe0c8 50%, transparent);
+  --surface-border: color-mix(in srgb, #e8956f 25%, transparent);
+  --header-bg: color-mix(in srgb, #fdf6f2 94%, transparent);
+  --text-main: #2d1f1a;
+  --text-muted: color-mix(in srgb, #d97857 68%, #fdf6f2);
+  --accent: #d97857;
+  --accent-light: #f5a88a;
+  --accent-soft: #e67e50;
+  --accent-warm: #e85a3f;
+  --text-on-accent: #fdf6f2;
+  --hover-bg: color-mix(in srgb, #e8956f 15%, transparent);
+  --input-bg: color-mix(in srgb, #ffffff 85%, #f5e6d3);
+  --accent-glow: color-mix(in srgb, #d97857 18%, transparent);
+  --accent-strong-glow: color-mix(in srgb, #f5e6d3 50%, transparent);
+  --shadow-color: color-mix(in srgb, #2d1f1a 12%, transparent);
+  --orb-1-color: color-mix(in srgb, #e8956f 15%, transparent);
+  --orb-2-color: color-mix(in srgb, #f5a88a 10%, transparent);
 }
 
-/* azure — Proyectos — #a8e8f9 #00537a #013c58 #f5a201 #ffba42 #ffd35b */
+/* azure — Proyectos */
 html[data-theme="azure"] {
-  --bg-color: #013c58;
-  --bg-mid: #00537a;
-  --surface-color: color-mix(in srgb, #00537a 40%, transparent);
-  --surface-border: color-mix(in srgb, #a8e8f9 16%, transparent);
-  --header-bg: color-mix(in srgb, #013c58 92%, transparent);
-  --text-main: #e8f4fa;
-  --text-muted: color-mix(in srgb, #a8e8f9 68%, #013c58);
-  --accent: #f5a201;
-  --accent-light: #ffba42;
-  --accent-soft: #a8e8f9;
-  --accent-warm: #ffd35b;
-  --text-on-accent: #013c58;
-  --hover-bg: color-mix(in srgb, #a8e8f9 10%, transparent);
-  --input-bg: color-mix(in srgb, #013c58 78%, #00537a);
-  --accent-glow: color-mix(in srgb, #f5a201 20%, transparent);
-  --accent-strong-glow: color-mix(in srgb, #00537a 42%, transparent);
-  --shadow-color: color-mix(in srgb, #013c58 68%, transparent);
-  --orb-1-color: color-mix(in srgb, #a8e8f9 18%, transparent);
-  --orb-2-color: color-mix(in srgb, #f5a201 12%, transparent);
+  --bg-color: #ecf5ff;
+  --bg-mid: #d4eaff;
+  --surface-color: color-mix(in srgb, #c2deff 48%, transparent);
+  --surface-border: color-mix(in srgb, #4a90e2 22%, transparent);
+  --header-bg: color-mix(in srgb, #ecf5ff 94%, transparent);
+  --text-main: #1a3a52;
+  --text-muted: color-mix(in srgb, #4a90e2 70%, #ecf5ff);
+  --accent: #4a90e2;
+  --accent-light: #6ba3f5;
+  --accent-soft: #3b7fd4;
+  --accent-warm: #ffa726;
+  --text-on-accent: #ecf5ff;
+  --hover-bg: color-mix(in srgb, #4a90e2 12%, transparent);
+  --input-bg: color-mix(in srgb, #ffffff 88%, #d4eaff);
+  --accent-glow: color-mix(in srgb, #4a90e2 18%, transparent);
+  --accent-strong-glow: color-mix(in srgb, #d4eaff 48%, transparent);
+  --shadow-color: color-mix(in srgb, #1a3a52 10%, transparent);
+  --orb-1-color: color-mix(in srgb, #4a90e2 15%, transparent);
+  --orb-2-color: color-mix(in srgb, #ffa726 10%, transparent);
 }
 
-/* wine — Formación — #003049 #6b2c39 #d62828 #f77f00 #fcbf49 #eae2b7 */
+/* wine — Formación */
 html[data-theme="wine"] {
-  --bg-color: #003049;
-  --bg-mid: #6b2c39;
-  --surface-color: color-mix(in srgb, #6b2c39 38%, transparent);
-  --surface-border: color-mix(in srgb, #eae2b7 14%, transparent);
-  --header-bg: color-mix(in srgb, #003049 92%, transparent);
-  --text-main: #f2ede4;
-  --text-muted: color-mix(in srgb, #eae2b7 58%, #003049);
-  --accent: #f77f00;
-  --accent-light: #fcbf49;
-  --accent-soft: #d62828;
-  --accent-warm: #fcbf49;
-  --text-on-accent: #003049;
-  --hover-bg: color-mix(in srgb, #eae2b7 8%, transparent);
-  --input-bg: color-mix(in srgb, #003049 80%, #6b2c39);
-  --accent-glow: color-mix(in srgb, #f77f00 18%, transparent);
-  --accent-strong-glow: color-mix(in srgb, #6b2c39 40%, transparent);
-  --shadow-color: color-mix(in srgb, #003049 72%, transparent);
-  --orb-1-color: color-mix(in srgb, #d62828 14%, transparent);
-  --orb-2-color: color-mix(in srgb, #fcbf49 12%, transparent);
+  --bg-color: #fff3f0;
+  --bg-mid: #ffd4cc;
+  --surface-color: color-mix(in srgb, #ffbfb5 46%, transparent);
+  --surface-border: color-mix(in srgb, #d97857 22%, transparent);
+  --header-bg: color-mix(in srgb, #fff3f0 94%, transparent);
+  --text-main: #5a1f1f;
+  --text-muted: color-mix(in srgb, #c41e3a 68%, #fff3f0);
+  --accent: #c41e3a;
+  --accent-light: #e85a5a;
+  --accent-soft: #c41e3a;
+  --accent-warm: #f57c47;
+  --text-on-accent: #fff3f0;
+  --hover-bg: color-mix(in srgb, #d97857 12%, transparent);
+  --input-bg: color-mix(in srgb, #ffffff 88%, #ffd4cc);
+  --accent-glow: color-mix(in srgb, #c41e3a 16%, transparent);
+  --accent-strong-glow: color-mix(in srgb, #ffd4cc 48%, transparent);
+  --shadow-color: color-mix(in srgb, #5a1f1f 11%, transparent);
+  --orb-1-color: color-mix(in srgb, #d97857 14%, transparent);
+  --orb-2-color: color-mix(in srgb, #f57c47 10%, transparent);
 }
 
-/* coast — Contacto — #8ecae6 #219ebc #126782 #023047 #ffb703 #fb8500 */
+/* coast — Contacto */
 html[data-theme="coast"] {
-  --bg-color: #023047;
-  --bg-mid: #126782;
-  --surface-color: color-mix(in srgb, #126782 38%, transparent);
-  --surface-border: color-mix(in srgb, #8ecae6 16%, transparent);
-  --header-bg: color-mix(in srgb, #023047 92%, transparent);
-  --text-main: #ecf7fc;
-  --text-muted: color-mix(in srgb, #8ecae6 65%, #023047);
-  --accent: #ffb703;
-  --accent-light: #fb8500;
-  --accent-soft: #8ecae6;
-  --accent-warm: #219ebc;
-  --text-on-accent: #023047;
-  --hover-bg: color-mix(in srgb, #8ecae6 10%, transparent);
-  --input-bg: color-mix(in srgb, #023047 78%, #126782);
-  --accent-glow: color-mix(in srgb, #ffb703 18%, transparent);
-  --accent-strong-glow: color-mix(in srgb, #126782 42%, transparent);
-  --shadow-color: color-mix(in srgb, #023047 70%, transparent);
-  --orb-1-color: color-mix(in srgb, #219ebc 18%, transparent);
-  --orb-2-color: color-mix(in srgb, #ffb703 12%, transparent);
+  --bg-color: #e6f4ff;
+  --bg-mid: #cde8ff;
+  --surface-color: color-mix(in srgb, #b8deff 48%, transparent);
+  --surface-border: color-mix(in srgb, #1e88e5 22%, transparent);
+  --header-bg: color-mix(in srgb, #e6f4ff 94%, transparent);
+  --text-main: #0d3b66;
+  --text-muted: color-mix(in srgb, #1e88e5 72%, #e6f4ff);
+  --accent: #1e88e5;
+  --accent-light: #42a5f5;
+  --accent-soft: #1565c0;
+  --accent-warm: #ff7043;
+  --text-on-accent: #e6f4ff;
+  --hover-bg: color-mix(in srgb, #1e88e5 12%, transparent);
+  --input-bg: color-mix(in srgb, #ffffff 88%, #cde8ff);
+  --accent-glow: color-mix(in srgb, #1e88e5 18%, transparent);
+  --accent-strong-glow: color-mix(in srgb, #cde8ff 48%, transparent);
+  --shadow-color: color-mix(in srgb, #0d3b66 10%, transparent);
+  --orb-1-color: color-mix(in srgb, #1e88e5 15%, transparent);
+  --orb-2-color: color-mix(in srgb, #ff7043 10%, transparent);
 }
 
-/* royal — Colaboraciones — #00296b #003f88 #00509d #fdc500 #ffd500 #c9a227 */
+/* royal — Colaboraciones */
 html[data-theme="royal"] {
-  --bg-color: #00296b;
-  --bg-mid: #00509d;
-  --surface-color: color-mix(in srgb, #003f88 42%, transparent);
-  --surface-border: color-mix(in srgb, #ffd500 14%, transparent);
-  --header-bg: color-mix(in srgb, #00296b 92%, transparent);
-  --text-main: #faf6e8;
-  --text-muted: color-mix(in srgb, #c9a227 50%, #00296b);
-  --accent: #fdc500;
-  --accent-light: #ffd500;
-  --accent-soft: #003f88;
-  --accent-warm: #c9a227;
-  --text-on-accent: #00296b;
-  --hover-bg: color-mix(in srgb, #ffd500 8%, transparent);
-  --input-bg: color-mix(in srgb, #00296b 78%, #003f88);
-  --accent-glow: color-mix(in srgb, #fdc500 18%, transparent);
-  --accent-strong-glow: color-mix(in srgb, #00509d 40%, transparent);
-  --shadow-color: color-mix(in srgb, #00296b 72%, transparent);
-  --orb-1-color: color-mix(in srgb, #00509d 22%, transparent);
-  --orb-2-color: color-mix(in srgb, #fdc500 12%, transparent);
+  --bg-color: #f0ebff;
+  --bg-mid: #ddd4f5;
+  --surface-color: color-mix(in srgb, #cfc2ed 48%, transparent);
+  --surface-border: color-mix(in srgb, #5e35b1 22%, transparent);
+  --header-bg: color-mix(in srgb, #f0ebff 94%, transparent);
+  --text-main: #311b92;
+  --text-muted: color-mix(in srgb, #5e35b1 70%, #f0ebff);
+  --accent: #5e35b1;
+  --accent-light: #7e57c2;
+  --accent-soft: #4527a0;
+  --accent-warm: #ffa726;
+  --text-on-accent: #f0ebff;
+  --hover-bg: color-mix(in srgb, #5e35b1 12%, transparent);
+  --input-bg: color-mix(in srgb, #ffffff 88%, #ddd4f5);
+  --accent-glow: color-mix(in srgb, #5e35b1 18%, transparent);
+  --accent-strong-glow: color-mix(in srgb, #ddd4f5 48%, transparent);
+  --shadow-color: color-mix(in srgb, #311b92 10%, transparent);
+  --orb-1-color: color-mix(in srgb, #5e35b1 15%, transparent);
+  --orb-2-color: color-mix(in srgb, #ffa726 10%, transparent);
 }
 
 html {
@@ -155,9 +155,9 @@ body {
   font-family: var(--font-sans);
   background-color: var(--bg-color);
   background-image:
-    radial-gradient(ellipse 90% 65% at 10% -5%, color-mix(in srgb, var(--bg-mid) 50%, transparent) 0%, transparent 52%),
-    radial-gradient(ellipse 70% 55% at 100% 100%, color-mix(in srgb, var(--accent-soft) 14%, transparent) 0%, transparent 48%),
-    linear-gradient(180deg, var(--bg-color) 0%, color-mix(in srgb, var(--bg-mid) 28%, var(--bg-color)) 100%);
+    radial-gradient(ellipse 90% 65% at 10% -5%, color-mix(in srgb, var(--bg-mid) 35%, transparent) 0%, transparent 52%),
+    radial-gradient(ellipse 70% 55% at 100% 100%, color-mix(in srgb, var(--accent-soft) 10%, transparent) 0%, transparent 48%),
+    linear-gradient(180deg, var(--bg-color) 0%, color-mix(in srgb, var(--bg-mid) 15%, var(--bg-color)) 100%);
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
