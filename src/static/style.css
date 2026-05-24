@@ -1001,7 +1001,7 @@ h4 {
   .site-header {
     height: auto;
     position: relative;
-    padding: 1.75rem 1.5rem;
+    padding: 1.25rem 1.25rem;
     border-right: none;
     border-bottom: 1.5px solid color-mix(in srgb, var(--surface-border) 60%, transparent);
     box-shadow: none;
@@ -1009,7 +1009,7 @@ h4 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
   }
   
@@ -1041,10 +1041,11 @@ h4 {
     order: 3;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    gap: 0.5rem;
+    gap: 0.3rem;
+    width: 100%;
   }
   
   .nav-tabs::-webkit-scrollbar {
@@ -1054,15 +1055,16 @@ h4 {
   .tab-btn {
     white-space: nowrap;
     width: auto;
-    padding: 0.75rem 1rem;
-    border-radius: 0.8rem;
-    font-size: 0.9rem;
-    gap: 0.5rem;
+    flex-shrink: 0;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    gap: 0.4rem;
   }
   
   .tab-btn svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
   
   .header-social {
@@ -1161,39 +1163,39 @@ h4 {
   }
   
   .site-header {
-    padding: 1rem 1.25rem;
+    padding: 0.8rem 1rem;
   }
   
   .header-brand {
-    gap: 0.75rem;
+    gap: 0.6rem;
   }
   
   .avatar {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
   
   .brand-info h1 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .brand-info p {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
   
   .nav-tabs {
-    gap: 0.4rem;
+    gap: 0.3rem;
   }
   
   .tab-btn {
-    padding: 0.65rem 0.85rem;
-    font-size: 0.85rem;
-    gap: 0.4rem;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.8rem;
+    gap: 0.3rem;
   }
   
   .tab-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
   }
   
   .main-content {
@@ -1220,77 +1222,94 @@ h4 {
   }
 
   .site-header {
-    padding: 1rem;
-    flex-direction: column;
+    padding: 0.8rem 0.75rem;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: left;
     border-bottom: 1.5px solid color-mix(in srgb, var(--surface-border) 60%, transparent);
+    gap: 0.75rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .header-brand {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    width: auto;
     gap: 0.5rem;
-    text-align: center;
+    text-align: left;
+    flex-shrink: 0;
   }
 
   .avatar {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    margin: 0;
   }
 
   .brand-info h1 {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .brand-info p {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 
   .nav-tabs {
-    width: 100%;
-    gap: 0.35rem;
-    padding-bottom: 0.5rem;
+    width: calc(100% - 0.75rem);
+    gap: 0.25rem;
+    padding-bottom: 0.3rem;
+    order: 3;
+    flex: 1 1 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-direction: row;
+  }
+
+  .nav-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .tab-btn {
-    padding: 0.7rem 0.8rem;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    border-radius: 0.8rem;
-    flex: 1 1 auto;
+    padding: 0.6rem 0.7rem;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    border-radius: 0.7rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+    width: auto;
   }
   
   .tab-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
   }
   
   .tab-btn:not(.active) {
-    flex: 0 1 auto;
+    flex: none;
   }
 
   .header-social {
     display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
-    width: 100%;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    margin-top: 0;
+    width: auto;
+    flex-shrink: 0;
   }
 
   .social-link {
-    padding: 0.55rem;
-    width: 36px;
-    height: 36px;
+    padding: 0.4rem;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .social-link svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 
   .main-content {
@@ -1475,33 +1494,44 @@ h4 {
   }
 }
 
-/* Extra small devices */
-@media (max-width: 380px) {
-  .site-header {
-    padding: 0.75rem;
+/* Medium mobile devices (480px - 600px) */
+@media (max-width: 480px) and (orientation: portrait) {
+  html {
+    font-size: 13px;
   }
 
-  .header-brand {
+  .site-header {
+    padding: 0.7rem 0.6rem;
     gap: 0.5rem;
   }
 
+  .header-brand {
+    gap: 0.4rem;
+  }
+
   .avatar {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 
   .brand-info h1 {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .brand-info p {
+    font-size: 0.6rem;
   }
 
   .nav-tabs {
-    gap: 0.25rem;
+    gap: 0.2rem;
+    padding-bottom: 0.25rem;
   }
 
   .tab-btn {
-    padding: 0.6rem 0.65rem;
-    font-size: 0.8rem;
-    gap: 0.3rem;
+    padding: 0.55rem 0.65rem;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    border-radius: 0.65rem;
   }
 
   .tab-btn svg {
@@ -1509,32 +1539,121 @@ h4 {
     height: 14px;
   }
 
+  .header-social {
+    gap: 0.3rem;
+  }
+
+  .social-link {
+    padding: 0.35rem;
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-link svg {
+    width: 12px;
+    height: 12px;
+  }
+
   .main-content {
-    padding: 1rem;
+    padding: 1rem 0.75rem;
   }
 
   .content-header h2 {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
   }
 
   .lead-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 380px) {
+  html {
+    font-size: 12px;
+  }
+
+  .site-header {
+    padding: 0.6rem 0.5rem;
+    gap: 0.4rem;
+  }
+
+  .header-brand {
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-info h1 {
+    font-size: 0.9rem;
+  }
+
+  .brand-info p {
+    font-size: 0.55rem;
+  }
+
+  .nav-tabs {
+    gap: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.7rem;
+    gap: 0.2rem;
+    border-radius: 0.6rem;
+  }
+
+  .tab-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .header-social {
+    gap: 0.25rem;
+  }
+
+  .social-link {
+    padding: 0.3rem;
+    width: 26px;
+    height: 26px;
+  }
+
+  .social-link svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .main-content {
+    padding: 0.85rem 0.6rem;
+  }
+
+  .content-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .lead-text {
+    font-size: 0.9rem;
   }
 
   .glass-card {
-    padding: 1rem;
+    padding: 0.9rem;
   }
 
   .feature-card {
-    padding: 1.25rem;
+    padding: 1.1rem;
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   h4 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .project-content {
