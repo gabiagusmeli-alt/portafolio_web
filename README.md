@@ -1,5 +1,5 @@
 
-# 🚀 Portafolio Web Personal
+#  Portafolio Web Personal
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Deploy](https://img.shields.io/badge/Deploy-PythonAnywhere-yellow.svg)](https://gabidev1.pythonanywhere.com/)
@@ -12,12 +12,12 @@
 
 ---
 
-## ✨ Características Principales
+##  Características Principales
 
-* **📱 Diseño Responsivo:** Interfaz limpia, enfocada en el contenido y adaptable a cualquier tamaño de pantalla.
-* **🧩 Estructura Modular:** Separación clara entre la lógica de negocio (`src/`), las vistas (`templates/`) y los recursos (`static/`).
-* **🎨 CSS Minimalista:** Estilos ligeros, fáciles de leer y de sobreescribir.
-* **🚀 Despliegue Rápido:** Configurado con `requirements.txt` para llevarlo a producción en minutos.
+* ** Diseño Responsivo:** Interfaz limpia, enfocada en el contenido y adaptable a cualquier tamaño de pantalla.
+* ** Estructura Modular:** Separación clara entre la lógica de negocio (`src/`), las vistas (`templates/`) y los recursos (`static/`).
+* ** CSS Minimalista:** Estilos ligeros, fáciles de leer y de sobreescribir.
+* ** Despliegue Rápido:** Configurado con `requirements.txt` para llevarlo a producción en minutos.
 
 ---
 
@@ -29,7 +29,7 @@ Antes de comenzar, asegúrate de tener instalado en tu sistema:
 
 ---
 
-## ⚙️ Instalación y Ejecución Local
+##  Instalación y Ejecución Local
 
 Sigue estos pasos para levantar el proyecto en tu entorno de desarrollo:
 
