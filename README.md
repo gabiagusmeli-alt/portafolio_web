@@ -14,10 +14,9 @@
 
 ##  Características Principales
 
-* ** Diseño Responsivo:** Interfaz limpia, enfocada en el contenido y adaptable a cualquier tamaño de pantalla.
-* ** Estructura Modular:** Separación clara entre la lógica de negocio (`src/`), las vistas (`templates/`) y los recursos (`static/`).
-* ** CSS Minimalista:** Estilos ligeros, fáciles de leer y de sobreescribir.
-* ** Despliegue Rápido:** Configurado con `requirements.txt` para llevarlo a producción en minutos.
+* **Diseño Responsivo:** Interfaz limpia, enfocada en el contenido y adaptable a cualquier tamaño de pantalla.
+* **Estructura Modular:** Separación clara entre la lógica de negocio (`src/`), las vistas (`templates/`) y los recursos (`static/`).
+* **CSS Minimalista:** Estilos ligeros, fáciles de leer y de sobreescribir.
 
 ---
 
