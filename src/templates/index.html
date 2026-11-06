@@ -1,443 +1,384 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="warm">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gabriel Meli | Web, APIs y Scraping</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#f8f7f4">
+  <meta name="description" content="Portafolio de Gabriel Meli, estudiante de Ciencias de la Computación y desarrollador junior. Proyectos de Python, APIs, C y sistemas.">
+  <title>Gabriel Meli — Desarrollador junior</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="app-container">
-    <!-- Navbar / Sidebar -->
-    <header class="site-header">
-      <div class="header-brand">
-        <div class="avatar">
-          <img src="{{ url_for('static', filename='foto.png') }}" alt="Gabriel Meli">
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Gabriel Meli, inicio">
+      <span class="brand-mark">GM</span>
+      <span class="brand-copy">
+        <strong>Gabriel Meli</strong>
+        <small>Desarrollador Python</small>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#tecnologias">Tecnologías</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="header-link" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="availability-dot"></span> Buscando mi primera oportunidad profesional</p>
+        <h1>Desarrollo con <span>Python</span> y aprendo construyendo.</h1>
+        <p class="hero-intro">Soy estudiante de Ciencias de la Computación en FAMAF, UNC, y desarrollador junior de Tanti, Córdoba. Me interesa crear aplicaciones útiles y entender cómo funcionan por dentro.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#proyectos">Ver mis proyectos <span aria-hidden="true">↓</span></a>
+          <a class="button button-text" href="mailto:gabiagusmeli@gmail.com">Escribime <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="brand-info">
-          <h1>Gabriel Meli</h1>
-          <p>Software Developer</p>
+        <div class="hero-meta">
+          <span>Enfoque actual</span>
+          <strong>Python · APIs backend · Sistemas</strong>
         </div>
       </div>
-      
-      <nav class="nav-tabs">
-        <button class="tab-btn active" data-target="sobre-mi" data-theme="warm">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          Sobre Mí
-        </button>
-        <button class="tab-btn" data-target="proyectos" data-theme="azure">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-          Proyectos
-        </button>
-        <button class="tab-btn" data-target="formacion" data-theme="wine">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-          Formación & Stack
-        </button>
-        <button class="tab-btn" data-target="contacto" data-theme="coast">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          Contacto
-        </button>
-        <button class="tab-btn" data-target="colaboraciones" data-theme="royal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          Colaboraciones
-        </button>
-      </nav>
-
-      <div class="header-social">
-        <a href="https://www.linkedin.com/in/gabriel-meli-4a298b396" target="_blank" rel="noreferrer" class="social-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
+      <div class="hero-portrait">
+        <div class="portrait-frame">
+          <img src="{{ url_for('static', filename='foto.png') }}" alt="Retrato de Gabriel Meli">
+        </div>
+        <span class="portrait-caption">Tanti, Córdoba · Argentina</span>
       </div>
-    </header>
+    </section>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-      
-      <!-- Tab: Sobre Mí -->
-      <section id="sobre-mi" class="tab-pane active fade-in">
-        <div class="content-header">
-          <span class="badge">Hola, soy Gabriel</span>
-          <h2>Construyo soluciones efectivas y eficientes.</h2>
-          <p class="lead-text">Transformo datos y procesos en productos digitales confiables usando Python, APIs, scraping y desarrollo web moderno.</p>
+    <section class="intro-section section-shell" id="sobre-mi">
+      <div class="section-label"><span>01</span> Un poco sobre mí</div>
+      <div class="intro-grid">
+        <h2>Me gusta resolver problemas, no solo escribir código.</h2>
+        <div class="intro-copy">
+          <p>Combino proyectos personales con trabajos académicos en equipo. Mi recorrido va desde aplicaciones con Python y Flask hasta programación en C, redes y sistemas operativos.</p>
+          <p>Busco mi primera oportunidad profesional para aportar curiosidad y constancia, aprender buenas prácticas en un equipo y ganar experiencia construyendo software real.</p>
+          <a class="inline-link" href="#contacto">¿Tenés una oportunidad para mí? <span aria-hidden="true">↗</span></a>
         </div>
-        
-        <div class="grid-2-col mt-4">
-          <div class="glass-card feature-card">
-            <div class="icon-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </div>
-            <h3>Proyectos Reales</h3>
-            <p>Aplicaciones web y automatización diseñadas para resolver problemas concretos de los clientes.</p>
+      </div>
+    </section>
+
+    <section class="work-section section-shell" id="proyectos">
+      <div class="section-heading">
+        <div>
+          <div class="section-label"><span>02</span> Trabajo seleccionado</div>
+          <h2>Proyectos que muestran cómo pienso.</h2>
+        </div>
+        <p>Aplicaciones personales y trabajos académicos en equipo, desde APIs y aplicaciones de escritorio hasta sistemas y redes.</p>
+      </div>
+
+      <div class="filter-status" id="filter-status" hidden>
+        <span>Mostrando proyectos con <strong id="filter-name"></strong></span>
+        <button type="button" id="clear-filter">Ver todos <span aria-hidden="true">×</span></button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card">
+          <div class="project-art art-api" aria-hidden="true">
+            <span class="art-kicker">BACKEND · API REST</span>
+            <div class="api-flow"><span>CLIENTE</span><i>↔</i><b>API</b><i>↔</i><span>WIKIDATA</span></div>
+            <div class="api-endpoint">GET /usuarios/{id}/juegos</div>
+            <span class="art-index">01 / 08</span>
           </div>
-          <div class="glass-card feature-card">
-            <div class="icon-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-            </div>
-            <h3>Arquitectura Sólida</h3>
-            <p>Código limpio, formularios seguros y despliegue estable pensando en el rendimiento a largo plazo.</p>
-          </div>
-        </div>
-
-        <div class="glass-card mt-4 p-4">
-          <h3 class="mb-3">¿Qué hago?</h3>
-          <ul class="skills-list">
-            <li><strong>Scraping Avanzado:</strong> Extracción de datos con BeautifulSoup, Selenium y Requests.</li>
-            <li><strong>Desarrollo Web Backend:</strong> Construcción de APIs y aplicaciones sólidas con Flask, Jinja y SQLAlchemy.</li>
-            <li><strong>Interfaces de Usuario:</strong> Desarrollo de aplicaciones de escritorio interactivas con PyQt6 y web frontends elegantes.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Tab: Proyectos -->
-      <section id="proyectos" class="tab-pane">
-        <div class="content-header">
-          <span class="badge">Portafolio</span>
-          <h2>Proyectos Destacados</h2>
-          <p class="lead-text">Una muestra de mi trabajo combinando visualización, análisis y lógica de alto rendimiento.</p>
-        </div>
-
-        <div id="active-filter-container" style="display: none; margin-bottom: 1.5rem; align-items: center; gap: 1rem;">
-          <span style="color: var(--text-muted); font-size: 0.9rem;">Filtro activo:</span>
-          <button id="clear-filter-btn" class="badge" style="cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 0;">
-            <span id="active-filter-name">Tecnología</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
-        </div>
-
-        <div class="projects-grid mt-4">
-          <article class="glass-card project-card">
-            <div class="project-content">
-              <h3><a href="https://github.com/gabiagusmeli-alt/Computer_Vision_Piano" target="_blank" style="color: inherit; text-decoration: none;">Computer Vision Piano <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 4px; opacity: 0.6;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></h3>
-              <p>Interfaz que a través del reconocimiento de gestos permite la manipulación de partículas y funciones matemáticas en un sistema de ejes tridimensional.</p>
+          <div class="project-body">
+            <div class="project-topline"><span>Proyecto académico · Equipo</span><span>01</span></div>
+            <h3>Video Game Recommender API</h3>
+            <p>API REST para organizar colecciones de videojuegos, consultar Wikidata y sugerir juegos. Incluye autenticación, SQLite, Docker, OpenAPI y tests.</p>
+            <div class="project-footer">
               <div class="tags">
-                <span>Python</span><span>OpenCV</span><span>Math</span>
+                <button type="button" class="tag filter-tag">Python</button>
+                <button type="button" class="tag filter-tag">Flask</button>
+                <button type="button" class="tag filter-tag">Docker</button>
+                <button type="button" class="tag filter-tag">pytest</button>
               </div>
-            </div>
-          </article>
-
-          <article class="glass-card project-card">
-            <div class="project-content">
-              <h3><a href="https://github.com/gabiagusmeli-alt/prime-imagen-factory-" target="_blank" style="color: inherit; text-decoration: none;">Prime Image Factory <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 4px; opacity: 0.6;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></h3>
-              <p>Motor de procesamiento de imágenes que transforma representaciones visuales en valores numéricos. Utiliza un algoritmo iterativo de primalidad implementado en C.</p>
-              <div class="tags">
-                <span>Python</span><span>C</span><span>PyQT6</span><span>Pillow</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="glass-card project-card">
-            <div class="project-content">
-              <h3><a href="https://github.com/gabiagusmeli-alt/generador-de-paletas-de-colores-" target="_blank" style="color: inherit; text-decoration: none;">Generador de Paletas de Colores <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 4px; opacity: 0.6;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></h3>
-              <p>Web app que genera paletas armónicas en tiempo real con Flask y Jinja. Incluye seguridad HTTP, sesión protegida y un diseño amigable para diseñadores y desarrolladores.</p>
-              <div class="tags">
-                <span>Flask</span><span>HTML/CSS</span><span>JS</span><span>UX</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="glass-card project-card">
-            <div class="project-content">
-              <h3><a href="https://github.com/gabiagusmeli-alt/portafolio_web" target="_blank" style="color: inherit; text-decoration: none;">Portafolio Web <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 4px; opacity: 0.6;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></h3>
-              <p>Un portafolio web para mostrar experiencia, integrando Flask, HTML, CSS moderno y preparado para futuras integraciones con bases de datos y automatización n8n.</p>
-              <div class="tags">
-                <span>Flask</span><span>HTML/CSS</span><span>JS</span>
-              </div>
-            </div>
-          </article>
-          
-          <article class="glass-card project-card">
-            <div class="project-content">
-              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                <h3 style="margin-bottom: 0;">Descargador de YouTube</h3>
-                <span class="status-badge">En desarrollo</span>
-              </div>
-              <p>Un descargador de videos y listas de reproducción de YouTube con una interfaz gráfica completa y agradable utilizando PyQt6.</p>
-              <div class="tags">
-                <span>Python</span><span>PyQT6</span><span>yt-dlp</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Tab: Colaboraciones -->
-      <section id="colaboraciones" class="tab-pane">
-        <div class="content-header">
-          <span class="badge">Trabajo en Equipo</span>
-          <h2>Colaboraciones</h2>
-          <p class="lead-text">Proyectos en los que he colaborado con otros desarrolladores y aportes al código abierto.</p>
-        </div>
-
-        <div class="projects-grid mt-4">
-          <article class="glass-card project-card" style="text-align: center; justify-content: center; min-height: 280px; display: flex; align-items: center; background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--surface-color)) 0%, color-mix(in srgb, var(--accent-warm) 8%, var(--surface-color)) 100%);">
-            <div class="project-content" style="align-items: center; justify-content: center; text-align: center;">
-              <div class="icon-wrapper" style="margin: 0 auto 1.5rem; font-size: 2.5rem;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 8 12 12 14 14"></polyline></svg>
-              </div>
-              <p style="margin-bottom: 0; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.03em;">Colaboraciones próximamente</p>
-              <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Aún trabajando en mis aportes al código abierto...</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Tab: Formación & Stack -->
-      <section id="formacion" class="tab-pane">
-        <div class="content-header">
-          <span class="badge">Skills & Trayectoria</span>
-          <h2>Evolución Profesional</h2>
-          <p class="lead-text">Mi stack tecnológico y el camino que he recorrido para dominarlo.</p>
-        </div>
-
-        <div class="grid-2-col mt-4">
-          <div class="stack-section">
-            <h3 class="section-title">Stack Tecnológico</h3>
-            <div class="glass-card p-4 mt-3">
-              <div class="tech-group">
-                <h4>Lenguajes</h4>
-                <div class="tags"><span class="solid-tag">Python</span><span class="solid-tag">C</span></div>
-              </div>
-              <div class="tech-group mt-3">
-                <h4>Frontend Web</h4>
-                <div class="tags"><span class="solid-tag">HTML5 / CSS3</span><span class="solid-tag">Jinja</span><span class="solid-tag">Bootstrap</span></div>
-              </div>
-              <div class="tech-group mt-3">
-                <h4>Backend & APIs</h4>
-                <div class="tags"><span class="solid-tag">Flask</span><span class="solid-tag">SQLAlchemy</span><span class="solid-tag">REST APIs</span></div>
-              </div>
-              <div class="tech-group mt-3">
-                <h4>Scraping & Datos</h4>
-                <div class="tags"><span class="solid-tag">BeautifulSoup</span><span class="solid-tag">Selenium</span><span class="solid-tag">Requests</span><span class="solid-tag">yt-dlp</span></div>
-              </div>
-              <div class="tech-group mt-3">
-                <h4>Desktop & Media</h4>
-                <div class="tags"><span class="solid-tag">PyQt6</span><span class="solid-tag">OpenCV</span><span class="solid-tag">Pillow</span></div>
-              </div>
-              <div class="tech-group mt-3">
-                <h4>Herramientas & Versionado</h4>
-                <div class="tags"><span class="solid-tag">Git</span><span class="solid-tag">Bitbucket</span><span class="solid-tag">Postman</span></div>
-              </div>
+              <a class="project-link" href="https://github.com/gabiagusmeli-alt/video_game_recommender_api-" target="_blank" rel="noopener noreferrer" aria-label="Ver Video Game Recommender API en GitHub">Ver código <span aria-hidden="true">↗</span></a>
             </div>
           </div>
+        </article>
 
-          <div class="timeline-section">
-            <h3 class="section-title">Trayectoria</h3>
-            <div class="timeline mt-3">
-              <div class="timeline-item glass-card">
-                <span class="timeline-year">2025</span>
-                <h4>Desarrollo de Aplicaciones Web</h4>
-                <p>Creación de proyectos integrales con Flask, plantillas Jinja y formularios dinámicos enfocados en UX/UI y rendimiento.</p>
+        <article class="project-card">
+          <div class="project-art art-downloader" aria-hidden="true">
+            <span class="art-kicker">APLICACIÓN DE ESCRITORIO · COMPLETO</span>
+            <div class="download-window">
+              <div class="download-icon">↓</div>
+              <div class="download-lines"><b>Descargar contenido</b><span>Formato, destino y progreso en una interfaz.</span><i><em></em></i></div>
+              <span class="download-percent">OK</span>
+            </div>
+            <span class="art-index">02 / 08</span>
+          </div>
+          <div class="project-body">
+            <div class="project-topline"><span>Aplicación personal · Completo</span><span>02</span></div>
+            <h3>Descargador de Videos</h3>
+            <p>Aplicación PyQt6 con búsqueda de información, selección de formatos y carpeta, progreso sin bloquear la interfaz y fusión de audio y video.</p>
+            <div class="project-footer">
+              <div class="tags">
+                <button type="button" class="tag filter-tag">Python</button>
+                <button type="button" class="tag filter-tag">PyQt6</button>
+                <button type="button" class="tag filter-tag">yt-dlp</button>
               </div>
-              <div class="timeline-item glass-card">
-                <span class="timeline-year">2024</span>
-                <h4>Scraping y Automatización</h4>
-                <p>Implementación de motores de extracción de datos con Requests, BeautifulSoup y Selenium. Desarrollo de aplicaciones de escritorio con PyQt6.</p>
-              </div>
+              <a class="project-link" href="https://github.com/gabiagusmeli-alt/descargador_youtube" target="_blank" rel="noopener noreferrer" aria-label="Ver Descargador de Videos en GitHub">Ver código <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-        </div>
-      </section>
+        </article>
 
-      <!-- Tab: Contacto -->
-      <section id="contacto" class="tab-pane">
-        <div class="content-header">
-          <span class="badge">Hablemos</span>
-          <h2>Estoy listo para nuevos desafíos</h2>
-          <p class="lead-text">Si buscas un perfil comprometido con la calidad del código y con ganas de aportar valor, contáctame.</p>
-        </div>
-
-        <div class="grid-2-col mt-4">
-          <div class="contact-info-panel">
-            <div class="glass-card info-card" style="background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, var(--surface-color)) 0%, transparent 100%); border: 1.5px solid color-mix(in srgb, var(--accent) 25%, transparent);">
-              <div class="icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </div>
-              <div>
-                <h4>Email</h4>
-                <p><a href="mailto:gabiagusmeli@gmail.com" style="color: var(--text-muted); text-decoration: none; transition: color var(--transition-normal);" onmouseover="this.style.color='var(--accent-light)'" onmouseout="this.style.color='var(--text-muted)'">gabiagusmeli@gmail.com</a></p>
-              </div>
+        <article class="project-card">
+          <div class="project-art art-vision" aria-hidden="true">
+            <span class="art-kicker">INTERACCIÓN · VISIÓN</span>
+            <div class="vision-stage">
+              <span class="vision-orbit orbit-one"></span>
+              <span class="vision-orbit orbit-two"></span>
+              <span class="vision-cursor">✳</span>
+              <span class="vision-coordinate">x&nbsp; 0.72<br>y&nbsp; 0.38</span>
             </div>
-            
-            <div class="glass-card info-card mt-3" style="background: linear-gradient(135deg, color-mix(in srgb, var(--accent-warm) 12%, var(--surface-color)) 0%, transparent 100%); border: 1.5px solid color-mix(in srgb, var(--accent-warm) 25%, transparent);">
-              <div class="icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span class="art-index">03 / 08</span>
+          </div>
+          <div class="project-body">
+            <div class="project-topline"><span>Proyecto personal</span><span>03</span></div>
+            <h3>Computer Vision Piano</h3>
+            <p>Una interfaz experimental que reconoce gestos y permite manipular partículas y funciones matemáticas en un espacio tridimensional.</p>
+            <div class="project-footer">
+              <div class="tags">
+                <button type="button" class="tag filter-tag">Python</button>
+                <button type="button" class="tag filter-tag">OpenCV</button>
+                <button type="button" class="tag filter-tag">Math</button>
               </div>
-              <div>
-                <h4>Ubicación</h4>
-                <p>Tanti, Córdoba - Argentina</p>
-              </div>
-            </div>
-            
-            <div class="glass-card info-card mt-3" style="background: linear-gradient(135deg, color-mix(in srgb, var(--accent-soft) 12%, var(--surface-color)) 0%, transparent 100%); border: 1.5px solid color-mix(in srgb, var(--accent-soft) 25%, transparent);">
-              <div class="icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </div>
-              <div>
-                <h4>LinkedIn</h4>
-                <p><a href="https://www.linkedin.com/in/gabriel-meli-4a298b396" target="_blank" rel="noreferrer" style="color: var(--text-muted); text-decoration: none; transition: color var(--transition-normal);" onmouseover="this.style.color='var(--accent-light)'" onmouseout="this.style.color='var(--text-muted)'">Gabriel Meli</a></p>
-              </div>
+              <a class="project-link" href="https://github.com/gabiagusmeli-alt/Computer_Vision_Piano" target="_blank" rel="noopener noreferrer" aria-label="Ver Computer Vision Piano en GitHub">Ver código <span aria-hidden="true">↗</span></a>
             </div>
           </div>
+        </article>
 
-          <div class="glass-card form-panel">
-            <form action="/" method="POST" class="contact-form">
-              {% if mensaje_error %}
-                <div class="alert alert-error">
-                  {{ mensaje_error }}
-                </div>
-              {% endif %}
-              
-              {% if mensaje_exito %}
-                <div class="alert alert-success">
-                  {{ mensaje_exito }}
-                </div>
-              {% endif %}
-              
-              <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" maxlength="50" required>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="tu@correo.com" required maxlength="100">
-              </div>
-
-              <div class="form-group">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto..." required maxlength="510"></textarea>
-              </div>
-
-              <button type="submit" class="btn-primary">
-                Enviar mensaje
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-              </button>
-            </form>
+        <article class="project-card">
+          <div class="project-art art-shell" aria-hidden="true">
+            <span class="art-kicker">SISTEMAS OPERATIVOS · C</span>
+            <div class="terminal-window"><div><i></i><i></i><i></i><span>mybash</span></div><p><b>$</b> ls -l | grep src<br><b>$</b> ./programa &amp;<br><b class="terminal-cursor">▌</b></p></div>
+            <span class="art-index">04 / 08</span>
           </div>
+          <div class="project-body">
+            <div class="project-topline"><span>Proyecto académico · Equipo</span><span>04</span></div>
+            <h3>mybash — Shell en C</h3>
+            <p>Intérprete de comandos propio con procesos, pipelines, redirección de entrada/salida y ejecución en segundo plano.</p>
+            <div class="project-footer">
+              <div class="tags">
+                <button type="button" class="tag filter-tag">C</button>
+                <button type="button" class="tag filter-tag">Linux</button>
+                <button type="button" class="tag filter-tag">Procesos</button>
+              </div>
+              <a class="project-link" href="https://github.com/gabiagusmeli-alt/mybash_shell-" target="_blank" rel="noopener noreferrer" aria-label="Ver mybash en GitHub">Ver código <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art art-filesystem" aria-hidden="true">
+            <span class="art-kicker">SISTEMAS OPERATIVOS · FUSE</span>
+            <div class="filesystem-tree"><b>fat32.img</b><span>├─ docs</span><span>│&nbsp; └─ notas.txt</span><span>└─ foto.jpg</span></div>
+            <span class="art-index">05 / 08</span>
+          </div>
+          <div class="project-body">
+            <div class="project-topline"><span>Proyecto académico · Equipo</span><span>05</span></div>
+            <h3>FAT32 FUSE Filesystem</h3>
+            <p>Sistema de archivos en espacio de usuario para montar imágenes FAT32 y operar archivos mediante FUSE, con lectura y escritura por clusters.</p>
+            <div class="project-footer">
+              <div class="tags">
+                <button type="button" class="tag filter-tag">C</button>
+                <button type="button" class="tag filter-tag">FUSE</button>
+                <button type="button" class="tag filter-tag">Linux</button>
+              </div>
+              <a class="project-link" href="https://github.com/gabiagusmeli-alt/fat32_fuse_filesystem" target="_blank" rel="noopener noreferrer" aria-label="Ver FAT32 FUSE Filesystem en GitHub">Ver código <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art art-hftp" aria-hidden="true">
+            <span class="art-kicker">REDES · PROTOCOLO TCP</span>
+            <div class="network-flow"><span>CLIENTE</span><i></i><b>HFTP</b><i></i><span>SERVIDOR</span></div>
+            <div class="network-packet">GET_SLICE · RAW</div>
+            <span class="art-index">06 / 08</span>
+          </div>
+          <div class="project-body">
+            <div class="project-topline"><span>Proyecto académico · Equipo</span><span>06</span></div>
+            <h3>HFTP — Home-made File Transfer Protocol</h3>
+            <p>Protocolo de transferencia sobre TCP con cliente CLI, servidor multi-cliente y modos de transferencia binario y Base64.</p>
+            <div class="project-footer">
+              <div class="tags">
+                <button type="button" class="tag filter-tag">Python</button>
+                <button type="button" class="tag filter-tag">TCP</button>
+                <button type="button" class="tag filter-tag">Sockets</button>
+              </div>
+              <a class="project-link" href="https://github.com/gabiagusmeli-alt/hftp_file_transfer" target="_blank" rel="noopener noreferrer" aria-label="Ver HFTP en GitHub">Ver código <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art art-prime" aria-hidden="true">
+            <span class="art-kicker">IMAGEN · ALGORITMOS</span>
+            <div class="prime-canvas">
+              <span class="prime-number">101</span>
+              <span class="prime-pixel pixel-a"></span><span class="prime-pixel pixel-b"></span><span class="prime-pixel pixel-c"></span>
+              <span class="prime-pixel pixel-d"></span><span class="prime-pixel pixel-e"></span><span class="prime-pixel pixel-f"></span>
+              <span class="prime-pixel pixel-g"></span><span class="prime-pixel pixel-h"></span><span class="prime-pixel pixel-i"></span>
+            </div>
+            <span class="art-index">07 / 08</span>
+          </div>
+          <div class="project-body">
+            <div class="project-topline"><span>Proyecto personal</span><span>07</span></div>
+            <h3>Prime Image Factory</h3>
+            <p>Procesador de imágenes que transforma representaciones visuales con un algoritmo iterativo de primalidad implementado en C.</p>
+            <div class="project-footer">
+              <div class="tags">
+                <button type="button" class="tag filter-tag">Python</button>
+                <button type="button" class="tag filter-tag">C</button>
+                <button type="button" class="tag filter-tag">PyQt6</button>
+                <button type="button" class="tag filter-tag">Pillow</button>
+              </div>
+              <a class="project-link" href="https://github.com/gabiagusmeli-alt/prime-imagen-factory-" target="_blank" rel="noopener noreferrer" aria-label="Ver Prime Image Factory en GitHub">Ver código <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art art-palette" aria-hidden="true">
+            <span class="art-kicker">HERRAMIENTA WEB · COLOR</span>
+            <div class="palette-window">
+              <div class="palette-toolbar"><i></i><i></i><i></i><span>paleta.armonica()</span></div>
+              <div class="palette-swatches"><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="palette-caption"><span>Armonía cálida</span><span>#D97857</span></div>
+            </div>
+            <span class="art-index">08 / 08</span>
+          </div>
+          <div class="project-body">
+            <div class="project-topline"><span>Proyecto personal</span><span>08</span></div>
+            <h3>Generador de Paletas de Colores</h3>
+            <p>Aplicación web con Flask para generar y explorar combinaciones armónicas de color en tiempo real.</p>
+            <div class="project-footer">
+              <div class="tags">
+                <button type="button" class="tag filter-tag">Flask</button>
+                <button type="button" class="tag filter-tag">HTML/CSS</button>
+                <button type="button" class="tag filter-tag">JavaScript</button>
+              </div>
+              <a class="project-link" href="https://github.com/gabiagusmeli-alt/generador-de-paletas-de-colores-" target="_blank" rel="noopener noreferrer" aria-label="Ver Generador de Paletas de Colores en GitHub">Ver código <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="more-projects">
+        <span>Más proyectos en GitHub</span>
+        <a href="https://github.com/gabiagusmeli-alt/xv6_semaforos" target="_blank" rel="noopener noreferrer">Semáforos en xv6</a>
+        <a href="https://github.com/gabiagusmeli-alt/reddit_ner_system-" target="_blank" rel="noopener noreferrer">Reddit NER con Spark</a>
+        <a href="https://github.com/gabiagusmeli-alt/generador-de-arbol-genealogico-en-obsidian" target="_blank" rel="noopener noreferrer">Generador de árboles para Obsidian</a>
+      </div>
+      <p class="github-note">¿Querés revisar el código y los README? <a href="https://github.com/gabiagusmeli-alt" target="_blank" rel="noopener noreferrer">Visitá mi perfil de GitHub <span aria-hidden="true">↗</span></a></p>
+    </section>
+
+    <section class="approach-section section-shell" id="tecnologias">
+      <div class="section-label"><span>03</span> Cómo trabajo</div>
+      <div class="approach-grid">
+        <div>
+          <h2>Una base práctica para seguir creciendo.</h2>
+          <p class="approach-copy">Aprendo creando proyectos de principio a fin: desde entender el problema y probar ideas, hasta construir una interfaz y dejar el código listo para compartir.</p>
         </div>
-      </section>
+        <div class="toolbox">
+          <div class="toolbox-row"><span>Lenguajes</span><div class="tool-tags"><span>Python</span><span>C</span><span>JavaScript</span><span>Scala</span></div></div>
+          <div class="toolbox-row"><span>Web y backend</span><div class="tool-tags"><span>Flask</span><span>REST APIs</span><span>OpenAPI</span><span>Jinja</span><span>HTML</span><span>CSS</span></div></div>
+          <div class="toolbox-row"><span>Datos y visión</span><div class="tool-tags"><span>SQLite</span><span>SQLAlchemy</span><span>OpenCV</span><span>Pillow</span><span>Apache Spark</span></div></div>
+          <div class="toolbox-row"><span>Herramientas y sistemas</span><div class="tool-tags"><span>Git</span><span>Docker</span><span>pytest</span><span>PyQt6</span><span>Linux</span><span>FUSE</span></div></div>
+        </div>
+      </div>
+    </section>
 
-      <footer class="site-footer mt-5">
-        <p>© 2026 Gabriel Meli. Web, APIs y Scraping.</p>
-      </footer>
-    </main>
-  </div>
+    <section class="journey-section section-shell">
+      <div class="section-heading">
+        <div>
+          <div class="section-label"><span>04</span> Formación y práctica</div>
+          <h2>Aprender haciendo.</h2>
+        </div>
+        <p>Formación universitaria y proyectos para llevar los conceptos a la práctica.</p>
+      </div>
+      <div class="journey-list">
+        <article class="journey-item"><span class="journey-year">FAMAF · UNC</span><div><h3>Ciencias de la Computación</h3><p>Formación en programación, redes, paradigmas y sistemas operativos, complementada con proyectos prácticos.</p></div><span class="journey-mark" aria-hidden="true">↗</span></article>
+        <article class="journey-item"><span class="journey-year">Práctica</span><div><h3>Proyectos propios y académicos</h3><p>Aplicaciones con Python, proyectos de sistemas en C y trabajos de equipo documentados en repositorios públicos.</p></div><span class="journey-mark" aria-hidden="true">↗</span></article>
+      </div>
+    </section>
 
-  <div class="bg-effects">
-    <div class="glow-orb orb-1"></div>
-    <div class="glow-orb orb-2"></div>
-  </div>
+    <section class="contact-section section-shell" id="contacto">
+      <div class="contact-copy">
+        <div class="section-label"><span>05</span> Contacto</div>
+        <h2>¿Buscás a alguien con ganas de aportar y crecer?</h2>
+        <p>Estoy abierto a conversar sobre oportunidades junior, proyectos y desafíos interesantes.</p>
+        <a class="contact-email" href="mailto:gabiagusmeli@gmail.com">gabiagusmeli@gmail.com <span aria-hidden="true">↗</span></a>
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/gabriel-meli-4a298b396" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/gabiagusmeli-alt" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <form action="/" method="POST" class="contact-form">
+        {% if mensaje_error %}
+          <div class="alert alert-error" role="alert">{{ mensaje_error }}</div>
+        {% endif %}
+        {% if mensaje_exito %}
+          <div class="alert alert-success" role="status">{{ mensaje_exito }}</div>
+        {% endif %}
+        <p class="form-heading">Mandame un mensaje</p>
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamás?" maxlength="50" autocomplete="name" required>
+        <label for="email">Tu email</label>
+        <input type="email" id="email" name="email" placeholder="nombre@correo.com" maxlength="100" autocomplete="email" required>
+        <label for="mensaje">¿En qué puedo ayudarte?</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame un poco..." maxlength="5000" required></textarea>
+        <button class="button button-primary submit-button" type="submit">Enviar mensaje <span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <a class="footer-brand" href="#inicio">Gabriel Meli<span>.</span></a>
+    <p>Hecho con dedicación en Córdoba, Argentina.</p>
+    <a href="#inicio">Volver arriba ↑</a>
+  </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const tabBtns = document.querySelectorAll('.tab-btn');
-      const tabPanes = document.querySelectorAll('.tab-pane');
-      const htmlElement = document.documentElement;
-      
-      const hasErrors = document.querySelector('.alert-error');
-      const hasSuccess = document.querySelector('.alert-success');
-      
-      if(hasErrors || hasSuccess) {
-         activateTab('contacto', 'coast');
-      }
-
-      tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          activateTab(btn.getAttribute('data-target'), btn.getAttribute('data-theme'));
-        });
-      });
-      
-      function activateTab(targetId, themeName) {
-        tabBtns.forEach(b => {
-          if(b.getAttribute('data-target') === targetId) {
-             b.classList.add('active');
-          } else {
-             b.classList.remove('active');
-          }
-        });
-
-        tabPanes.forEach(pane => {
-          if (pane.id === targetId) {
-            pane.classList.add('active');
-            void pane.offsetWidth;
-            pane.classList.add('fade-in');
-          } else {
-            pane.classList.remove('active', 'fade-in');
-          }
-        });
-
-        if (themeName) {
-          htmlElement.setAttribute('data-theme', themeName);
-        }
-      }
-
-      // Project Filtering Logic
-      const allTags = document.querySelectorAll('.tags span');
+      const filterButtons = document.querySelectorAll('.filter-tag');
       const projectCards = document.querySelectorAll('.project-card');
-      const filterContainer = document.getElementById('active-filter-container');
-      const activeFilterName = document.getElementById('active-filter-name');
-      const clearFilterBtn = document.getElementById('clear-filter-btn');
+      const filterStatus = document.getElementById('filter-status');
+      const filterName = document.getElementById('filter-name');
+      const clearFilter = document.getElementById('clear-filter');
 
-      function filterProjects(tech) {
-        projectCards.forEach(card => {
-          // Si la tarjeta es el marcador de posición "Próximamente", la omitimos
-          if(card.textContent.includes("Próximamente")) return;
-          
-          const cardTags = Array.from(card.querySelectorAll('.tags span')).map(span => span.textContent.trim().toLowerCase());
-          
-          // Verificar si alguna etiqueta de la tarjeta incluye el texto buscado (o viceversa)
-          const isMatch = cardTags.some(t => t.includes(tech.toLowerCase()) || tech.toLowerCase().includes(t));
-          
-          if (isMatch) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
+      function showAllProjects() {
+        projectCards.forEach((card) => {
+          card.hidden = false;
         });
+        filterStatus.hidden = true;
+        filterButtons.forEach((button) => button.setAttribute('aria-pressed', 'false'));
+      }
 
-        // Solo mostrar indicador si el contenedor de filtro existe
-        if(filterContainer) {
-          filterContainer.style.display = 'flex';
-          activeFilterName.textContent = tech;
-        }
-        
-        // Navegar a la pestaña Proyectos
-        activateTab('proyectos', 'azure');
-        
-        // Hacer scroll suave hacia la sección de proyectos
-        const proyectosTab = document.getElementById('proyectos');
-        if (proyectosTab) {
-          window.scrollTo({
-            top: proyectosTab.offsetTop - 100,
-            behavior: 'smooth'
+      filterButtons.forEach((button) => {
+        button.setAttribute('aria-pressed', 'false');
+        button.addEventListener('click', () => {
+          const technology = button.textContent.trim().toLowerCase();
+          projectCards.forEach((card) => {
+            const tags = Array.from(card.querySelectorAll('.filter-tag'))
+              .map((tag) => tag.textContent.trim().toLowerCase());
+            card.hidden = !tags.includes(technology);
           });
-        }
-      }
-
-      function clearFilter() {
-        projectCards.forEach(card => {
-          card.style.display = 'flex';
-        });
-        if(filterContainer) {
-          filterContainer.style.display = 'none';
-        }
-      }
-
-      // Añadir eventos a todas las etiquetas de tecnología
-      allTags.forEach(tag => {
-        tag.classList.add('clickable-tag');
-        tag.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const tech = tag.textContent.trim();
-          // Casos especiales (ej. "HTML5 / CSS3" separarlos o buscar ambas)
-          filterProjects(tech.split('/')[0].trim()); 
+          filterName.textContent = button.textContent.trim();
+          filterStatus.hidden = false;
+          filterButtons.forEach((tag) => tag.setAttribute('aria-pressed', String(tag === button)));
         });
       });
 
-      // Evento para el botón de limpiar filtro
-      if(clearFilterBtn) {
-        clearFilterBtn.addEventListener('click', clearFilter);
+      clearFilter.addEventListener('click', showAllProjects);
+
+      if (document.querySelector('.alert')) {
+        document.getElementById('contacto').scrollIntoView({ block: 'start' });
       }
     });
   </script>
